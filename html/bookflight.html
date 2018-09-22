@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" />
+      <link rel="stylesheet" href="../mindyourtrip/css/mindyourtrip.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         .row::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         [class*="col-"] {
+         float: left;
+         padding: 15px;
+         }
+         .col-1 {width: 8.33%;}
+         .col-2 {width: 16.66%;}
+         .col-3 {width: 25%;}
+         .col-4 {width: 33.33%;}
+         .col-5 {width: 41.66%;}
+         .col-6 {width: 50%;}
+         .col-7 {width: 58.33%;}
+         .col-8 {width: 66.66%;}
+         .col-9 {width: 75%;}
+         .col-10 {width: 83.33%;}
+         .col-11 {width: 91.66%;}
+         .col-12 {width: 100%;}
+         .menu {
+         float:left;
+         width:20%;
+         text-align:center;
+         }
+         .menu a {
+         background-color:#e5e5e5;
+         padding:8px;
+         margin-top:7px;
+         display:block;
+         width:100%;
+         color:black;
+         }
+         .main {
+         float:left;
+         width:90%;
+         padding:0 20px;
+         }
+         .search {
+         float:left;
+         width:95%;
+         padding:0 20px;
+         }
+         .right {
+         background-color:#e5e5e5;
+         float:left;
+         width:20%;
+         padding:15px;
+         margin-top:7px;
+         text-align:center;
+         }
+.btn-4 {
+  border: 2px solid #4285f4;
+  color: #4285f4;
+        padding: 6px 42px;
+        margin: 1px 1px;
+}
+
+.btn-4a:hover,.btn-4a:active {
+  color: #fff;
+  background: #219ec4;
+}
+         @media only screen and (max-width:620px) {
+         /* For mobile phones: */
+         .menu, .main, .right {
+         width:100%;
+         }
+         }
+      </style>
+      <script src="../mindyourtrip/js/mindyourtrip.js" type="text/javascript"></script>
+      <script src='../json/citiesUS.json' type="text/javascript"></script>      
+      <script src='../js/app.js' type="text/javascript"></script>
+   </head>
+   <body style="font-family:Open Sans;color:slategray;">
+      <header>
+         <div style="font-size: 20px; padding: 10px"><span >CallForCode</span><span style="float:right;font-size:15px">smshahidraza@yahoo.com</span></div>
+      </header>
+      <div style="background-color:#4285f4;padding:15px;text-align:center;color: white;font-size: 40px">
+        <p>Mind Your Trip</p>
+        <p><span style="font-size: 20px" >A demo page on how an integerated weather alert on any travelling/hotel booking website works</span></p>
+
+      </div>
+
+         <div class="row search" >
+            <div class="col-3">
+               Departing City
+            </div>
+            <div class="col-3">
+               Arriving City
+            </div>
+            <div class="col-2">
+               Departing Date
+            </div>
+            <div class="col-2">
+               Returning Date
+            </div>
+         </div>
+         <div class="row search" style="padding-bottom: 10px">
+            <div class="col-3">
+               <select id="depcity" name="depcity" style="height: 34px;width: 100%;">
+                  <option value="000"></option>
+               </select>
+            </div>
+            <div class="col-3">
+               <select id="arrcity" name="arrcity" style="height: 34px;width: 100%;">
+                  <option value="000"></option>
+               </select>
+            </div>
+            <div class="col-2">
+               <input id="depdate" type="date" value="2017-06-01" style="height: 34px;width: 100%;">
+            </div>
+            <div class="col-2">
+               <input id="retdate" type="date" value="2017-06-01" style="height: 34px;width: 100%;">
+            </div>
+            <div class="col-2" style="padding-top: 10px">
+                <input class="appbtn btn-4 btn-4a" type="button"
+                    value="Search" name="search" id="search">
+
+            </div>
+
+         </div>
+         <div class="row search" style="padding-bottom: 10px">
+            <div     style="font-size: 22px;text-align: center;display: none" class="col-12" id="flightResult" >
+                  Loading Flight Result...
+            </div>
+
+         </div>         
+   </body>
+</html>

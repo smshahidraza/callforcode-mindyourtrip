@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" />
+  <link rel="stylesheet" href="css/mindyourtrip.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:95%;
+  padding:0 20px;
+}
+.search {
+  float:left;
+  width:90%;
+  padding:0 50px;
+}
+
+.right {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+.appbtn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 8px 22px;
+  display: inline-block;
+  margin: 12px 1px;
+  //text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.appbtn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-3 {
+  border: 2px solid white;
+  color: white;
+        padding: 10px 42px;
+        margin: 1px 1px;
+}
+
+.btn-3a:hover,.btn-3a:active {
+  color: #fff;
+  background: #219ec4;
+}
+
+
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+</style>
+
+<script>
+function openWin() {
+    window.open("html/bookflight.html");
+}
+</script>
+
+</head>
+<body style="font-family:Open Sans;color:slategray;">
+    <script src="js/mindyourtrip.js" type="text/javascript"></script>
+    <script src='json/citiesUS.json' type="text/javascript"></script>      
+    <script src='js/app.js' type="text/javascript"></script>
+
+<header>
+    <div style="font-size: 20px; padding: 10px"><span >CallForCode</span><span style="float:right;font-size:15px">smshahidraza@yahoo.com</span></div>
+  </header>
+
+<div style="background-color:#4285f4;padding:35px;text-align:center;color: white;font-size: 40px">
+  <p>Mind Your Trip</p>
+  <div style="font-size: 15px;"><input class="appbtn btn-3 btn-3a" type="button"
+              value="Enter The Demo" name="enterthedemo" id="enterthedemo" onclick="openWin()"></div>
+</div>
+
+<div style="overflow:auto">
+
+  <div class="main" style="padding-top: 10px">
+    <p><b>About the idea:</b></p>
+    <p> We have seen so many catastrophic natural disasters recently, affecting millions of lives and causing lot of damages. 
+ </p> 
+    <p>When a natural disaster happens in any city, it effects everyone including the visitor of the city. Though the visitor have options to flee easily but sometimes intensity of disaster is so high that it blocks all form of transportation. In that situation, visitor become more  vulnerable as they are not familiar with the area, don't know many people around and have limited resource.
+</p>
+    <p>If someone stuck in those situation, he/she may will think to avoid visiting the city during the time. My project is about to assist people doing that. Whenever people book a flight for any city or book a hotel online, he/she should get an alert if there is is any life threatening weather situation lies during the time, it will popup an alert message 
+    </p>
+
+    <p><b>How It Works:</b></p>
+    <p> Below diagram shows the overview of how this application works. 
+      Any airline booking website can embed two lines of code to use this weather alert and help their user to make an informed decision.
+    </p>
+      <img src="images/mindyourtriphowitworks_small.png" />
+
+
+      <p>1. Add the makemytrip javascript and css link to the website header where you want to add the alert.</p>
+      <ul>
+        <ol><i>src="js/mindyourtrip.js" type="text/javascript"</i></ol>
+        <ol><i>rel="stylesheet" href="css/mindyourtrip.css"</i></ol>
+      </ul>
+
+      <p>2. Call the weather alert method.</p>
+      <ul>
+        <ol><i>checkWeatherAlert(arrivingCityName, departingDate, returiningDate);</i></ol>
+      </ul>
+
+       
+
+      <p>The parameter needed to call the method are</p>
+      <ul>
+        <ol>1. City Name</ol>
+        <ol>2. Arrving Departure</ol>
+        <ol>3. Departing Return</ol>
+      </ul>
+
+      <p>The above information is already being provided by the user for their booking. We just need these three information to get the weather detail.
+      </p>
+      <p>
+      So if user search for any flight, the airline website will also make a call to mindyourtrip application.
+      MindYourTrip application will get the geo-code for arrivinng city name and internally call IBM weather headline API to check if there is any active weather alert for the arriving city during the flight booking and returning date.
+      </p>
+      <p>
+      A sample for webservice call.
+
+      <div><b><i>https://api.weather.com/v3/alerts/headlines?geocode="+geoCode+"&format=json&language=en-US&apiKey="+weather_api_key</i></b></div>
+      </p>
+      <p>
+      If alert exists, it prompts a dialog on airline website with a summary of alert. The alert dialog will have options to click on either 'Thank You' or 'Show Me Detail' button.
+      Clicking on 'Thank You' will close the alert dialog.
+      Clicking on 'Show Me Detail' will again make an additional call to get detail weather API using the detailKey derived from the above headline API.
+        </p>
+
+      <p> <b><i> 
+      https://api.weather.com/v3/alerts/detail?alertId="+detailKey+"&format=json&language=en-US&apiKey="+weather_api_key;
+        </i></b></p>
+
+      <p>
+      The alert dialog will be auto close so that it should not block user activity. After 5 seconds of waiting time, dialog will be closed and a header on top will be added on the page.
+      Again user can either close that header or click on the link to see the detail about alert.
+        </p>
+      <p><b>    
+      Future recommendaiton:
+      </b></p>  
+      Airline will have option to 
+
+      <ol>
+      <li>Activate/deactivate the alert.</li>
+      <li>Limit the severity for which alert should be activated.</li>
+      </ol>  
+
+    </p>
+
+    <p></p>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
